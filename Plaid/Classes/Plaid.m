@@ -204,7 +204,7 @@ static NSString * LinkHostForEnvironment(PlaidEnvironment environment) {
                    completion:(PlaidMfaCompletion)completion {
   NSMutableDictionary *parameters = [[NSMutableDictionary alloc] initWithDictionary:@{
     @"env" : NSStringFromPlaidEnviroment(_environment),
-    @"include_accounts": @(NO),
+    @"include_accounts": @(YES),
     @"institution_type": type,
     @"username": username,
     @"password": password,
@@ -247,7 +247,7 @@ static NSString * LinkHostForEnvironment(PlaidEnvironment environment) {
   }
   NSDictionary *parameters = @{
     @"env" : NSStringFromPlaidEnviroment(_environment),
-    @"include_accounts": @(NO),
+    @"include_accounts": @(YES),
     @"mfa": mfaResponse,
     @"product": NSStringFromPlaidProduct(product),
     @"public_key": _publicKey,
