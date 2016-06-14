@@ -11,9 +11,10 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
   if (self = [super init]) {
-    _availableAmount = [dictionary[@"available"] floatValue];
-    _currentAmount = [dictionary[@"current"] floatValue];
-    _limit = [dictionary[@"limit"] floatValue];
+      // sometimes these dicitionaryes come with null and this library is not using defensive coding, so as I don´t need those values in the project, Im just setting these to 0
+    _availableAmount = 0;
+      _currentAmount = 0;
+    _limit = 0;
   }
   return self;
 }
